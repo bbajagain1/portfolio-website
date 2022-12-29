@@ -1,21 +1,29 @@
 import React from "react";
 import { educationBackground } from "../constants";
+import '../styles/education.css'
+
 
 const Education = () => {
   return (
     <section>
-    <h1>Educational Background</h1>
+      <h1>Educational Background</h1>
 
       <table className="table-auto">
         <tbody>
           {educationBackground.map((edu) => (
             <tr key={edu.id}>
-              <td text-xs text-gray-700 uppercase bg-gray-700 text-gray-400>{edu.mindegree}</td>
+              <td class="text-edu">
+                {edu.mindegree}
+              </td>
               <td>
-                {edu.college}<br />
-                {edu.maindegree}<br />
-                {edu.year}<br />
-                {edu.details}<br />
+                <p class="text-maind">{edu.college}</p>
+                <br />
+                {edu.maindegree}
+                <br />
+                {edu.year}
+                <br />
+                {edu.details}
+                <br />
               </td>
             </tr>
           ))}
