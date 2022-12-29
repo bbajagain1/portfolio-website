@@ -15,13 +15,13 @@ const Contact = () => {
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
                 <form action="#" class="row g-lg-3 gy-3">
                     <div class="form-group col-md-6">
-                        <input type="text" class="form-control" placeholder="Enter your name">
+                        <input type="text" class="form-control" placeholder="Enter your name" />
                     </div>
                     <div class="form-group col-md-6">
-                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <input type="email" class="form-control" placeholder="Enter your email" />
                     </div>
                     <div class="form-group col-12">
-                        <input type="text" class="form-control" placeholder="Enter subject">
+                        <input type="text" class="form-control" placeholder="Enter subject" />
                     </div>
                     <div class="form-group col-12">
                         <textarea name="" rows="4" class="form-control" placeholder="Enter your message"></textarea>
