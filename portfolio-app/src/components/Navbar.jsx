@@ -9,15 +9,13 @@ function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav>
+    <nav className="nav">
       <BsFillBriefcaseFill />
-      <ul>
+      <ul className="ul">
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={` font-normal cursor-pointer text-[16px]  ${
-              index === navLinks.length - 1 ? "mr-0" : "mr-10"
-            }`}
+            className={` ${index === navLinks.length - 1 ? 'mr.p' : 'mr.q'}`}
           >
             {nav.title}
           </li>

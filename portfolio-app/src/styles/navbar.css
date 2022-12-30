@@ -5,6 +5,7 @@ padding-bottom: 1.5rem;
 justify-content: space-between;
 align-items: center;
 flex: 110%; 
+font-size: large;
 }
 
 .ul{
@@ -18,8 +19,18 @@ align-items: center;
 .li{
     font-weight: 400; 
 cursor: pointer; 
-color:16px
+color:16px;
+margin-right: 0;
 }
+
+.mr.p{
+    margin-right: 0;
+}
+
+.mr.q{
+    margin-left:10;
+}
+
 
 @media screen and (min-width: 600px) {
     .ul {
