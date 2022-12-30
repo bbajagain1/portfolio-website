@@ -1,21 +1,21 @@
 import React from "react";
-import "../index.css";
 import { useState } from "react";
 import { navLinks } from "../constants";
 import { close, menu } from "../assets";
 import { BsFillBriefcaseFill } from "react-icons/bs";
+import "../styles/navbar.css";
 
 function Navbar() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="w-full flex py-6 justify-between items-center navbar">
+    <nav>
       <BsFillBriefcaseFill />
-      <ul className="list-none sm:flex hidden justify-end items-center flex-1">
+      <ul>
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}
-            className={` font-poppins font-normal cursor-pointer text-[16px]  ${
+            className={` font-normal cursor-pointer text-[16px]  ${
               index === navLinks.length - 1 ? "mr-0" : "mr-10"
             }`}
           >
@@ -40,7 +40,7 @@ function Navbar() {
             {navLinks.map((nav, index) => (
               <li
                 key={nav.id}
-                className={` font-poppins font-normal cursor-pointer text-[16px]  ${
+                className={` font-normal cursor-pointer text-[16px]  ${
                   index === navLinks.length - 1 ? "mb-0" : "mb-4"
                 }`}
               >

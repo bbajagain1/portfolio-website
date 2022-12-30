@@ -5,6 +5,7 @@ import "../styles/projects.css";
 const Projects = () => {
   return (
     <>
+    <heading>MY PROJECTS</heading>
       <div id="carouselExampleIndicators" class="carousel slide bg-gray-400" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full relative left-30">
           <h1 className="flex-1 font-semibold ss:text-[72px] text-[90px] text-white ss:leading-[100.8px] leading-[75px]">
             Welcome to  <br className="sm:block hidden" />{" "}
-            <span className="text-gradient font-family:"> My Portfolio</span>{" "}
+            <span className="text-gradient"> My Portfolio</span>{" "}
           </h1>
         </div>
 
@@ -18,8 +18,6 @@ const Hero = () => {
 
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
         <img src={portfolio} alt="billing" className="w-[100%] h-[100%] relative left-45" />
-
-      
       </div>
     </section>
   );
