@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import "../styles/footer.css";
 
-const Footer = () => (
-    <section>
-        
-    </section>
-)
+import { SiFacebook, SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
 
-export default Footer
+function Footer() {
+    return (
+      <div className="footer">
+        <div className="socialMedia">
+          <SiFacebook className="icon" />
+          <SiTwitter className="icon" />
+          <SiGithub className="icon"/>
+          <SiLinkedin className="icon"/>
+        </div>
+        <p> &copy; 2022 bibektech.com</p>
+      </div>
+    );
+  }
+  
+
+export default Footer;

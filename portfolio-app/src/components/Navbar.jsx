@@ -1,39 +1,35 @@
-import React from "react";
-import { useState } from "react";
-import { navLinks } from "../constants";
-import { close, menu } from "../assets";
-import { BsFillBriefcaseFill } from "react-icons/bs";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/navbar.css";
+import { BiAlignJustify } from 'react-icons/bi';
 
 function Navbar() {
-  
-  
+  const [expandNavbar, setExpandNavbar] = useState(false);
 
-  // Create a condition that targets viewports at least 768px wide
-  const mediaQuery = window.matchMedia("(min-width: 768px)");
+  const location = useLocation();
 
-  function handleTabletChange(e) {
-    // Check if the media query is true
-    if (e.matches) {
-      // Then log the following message to the console
-      console.log('big devices');
-    } else {
-      console.log('small devices');
-    }
-  }
+  useEffect(() => {
+    setExpandNavbar(false);
+  }, [location]);
 
-  // Register event listener
-  mediaQuery.addListener(handleTabletChange);
-
-  // Initial check
-  handleTabletChange(mediaQuery);
-
-  return(
-    <>
-      <p>Navbar</p>
-      <button>Click</button>
-    </>
-  )
+  return (
+    <div className="navbar" id={expandNavbar ? "open" : "close"}>
+      <div className="toggleButton">
+        <button
+          onClick={() => {
+            setExpandNavbar((prev) => !prev);
+          }}
+        >
+          <BiAlignJustify />
+        </button>
+      </div>
+      <div className="links">
+        <Link to="/"> Home </Link>
+        <Link to="/projects"> Projects </Link>
+        <Link to="/experience"> Experience </Link>
+      </div>
+    </div>
+  );
 }
 
 export default Navbar;
