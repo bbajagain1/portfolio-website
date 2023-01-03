@@ -4,5 +4,5 @@ import Education from "./Education";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
-
-export{Navbar,Hero,Education,Projects,Contact,Footer} ;
+import Experience from "./Experience";
+export{Navbar,Hero,Education,Projects,Contact,Footer,Experience} ;

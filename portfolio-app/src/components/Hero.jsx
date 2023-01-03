@@ -1,26 +1,44 @@
-import styles from "../styles";
-import { discount, robot,portfolio } from "../assets";
+import React from "react";
+import { SiMinutemailer, SiGithub, SiLinkedin } from "react-icons/si";
+import "../styles/hero.css";
 
-
-const Hero = () => {
+function Hero() {
   return (
-    <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-
-        <div className="flex flex-row justify-between items-center w-full relative left-30">
-          <h1 className="flex-1 font-semibold ss:text-[72px] text-[90px] text-white ss:leading-[100.8px] leading-[75px]">
-            Welcome to  <br className="sm:block hidden" />{" "}
-            <span className="text-gradient"> My Portfolio</span>{" "}
-          </h1>
+    <div className="home">
+      <div className="about">
+        <h2> Hi, My Name is Bibek</h2>
+        <div className="prompt">
+          <p>A software developer with a passion for learning and creating.</p>
+          <SiLinkedin className="icon"/>
+          <SiMinutemailer className="icon"/>
+          <SiGithub className="icon"/>
         </div>
-
       </div>
-
-      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative`}>
-        <img src={portfolio} alt="billing" className="w-[100%] h-[100%] relative left-45" />
+      <div className="skills">
+        <h1> Skills</h1>
+        <ol className="list">
+          <li className="item">
+            <h2> Front-End</h2>
+            <span>
+              ReactJS, Angular, Redux, HTML, CSS, React Native, Flutter, NPM,
+              Ionic, BootStrap, MaterialUI, Yarn, TailwindCSS, StyledComponents
+            </span>
+          </li>
+          <li className="item">
+            <h2>Back-End</h2>
+            <span>
+              NodeJS, Java Spring, .NET, ExpressJS, GraphQL, ApolloServer,
+              MySQL, MongoDB, DynamoDB, DigitalOcean, AWS S3, MS SQL
+            </span>
+          </li>
+          <li className="item">
+            <h2>Languages</h2>
+            <span>JavaScript, Java, Python, C#, C, C++, TypeScript, Go</span>
+          </li>
+        </ol>
       </div>
-    </section>
+    </div>
   );
-};
+}
 
 export default Hero;

@@ -1,6 +1,6 @@
 import "./index.css";
 import styles from "./styles";
-import { Navbar, Hero, Education, Projects, Contact,Footer } from "./components";
+import { Navbar, Hero, Education, Projects, Contact,Footer,Experience } from "./components";
 import { BrowserRouter as Router , Routes, Route } from "react-router-dom";
 
 function App() {
@@ -11,8 +11,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/experience" element={<Education />} />
-          <Route path="/experience" element={<Contact />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
         <Footer />
       </Router>
