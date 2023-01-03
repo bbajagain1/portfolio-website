@@ -4,13 +4,14 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import SchoolIcon from '@mui/icons-material/School';
 import WorkIcon from '@mui/icons-material/Work';
+import '../styles/experience.css';
 
 
 function Experience() {
     return (
-      <div className="experience">
+      <div>
+      <h1 className="heading">My Experiences</h1>
         <VerticalTimeline lineColor="#3e497a">
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
@@ -34,14 +35,13 @@ function Experience() {
             icon={<WorkIcon />}
           >
             <h3 className="vertical-timeline-element-title">
-              Full Stack Engineer - Twitch
+              Intern
             </h3>
             <h4 className="vertical-timeline-element-subtitle">
               San Francisco, CA
             </h4>
             <p>
-              Helped the team launch 2 major features by working both in the front
-              end and back end.
+              Dream of doing intern in big company.
             </p>
           </VerticalTimelineElement>
         </VerticalTimeline>
