@@ -1,35 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { logo } from "../assets";
+import { navLinks } from "../constants";
 import "../styles/navbar.css";
-import { BiAlignJustify } from 'react-icons/bi';
 
-function Navbar() {
-  const [expandNavbar, setExpandNavbar] = useState(false);
-
-  const location = useLocation();
-
-  useEffect(() => {
-    setExpandNavbar(false);
-  }, [location]);
-
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="navbar" id={expandNavbar ? "open" : "close"}>
-      <div className="toggleButton">
-        <button
-          onClick={() => {
-            setExpandNavbar((prev) => !prev);
-          }}
-        >
-          <BiAlignJustify />
-        </button>
+    <div className="Navbar">
+      <span className="nav-logo">Bibek Bajagain portfolio</span>
+      <div className={`nav-items ${isOpen && "open"}`}>
+        <a href="/home">Home</a>
+        <a href="/education">Education</a>
+        <a href="/experience">Experience</a>
+        <a href="/skills">Skills</a>
+        <a href="/contact">Contact</a>
       </div>
-      <div className="links">
-        <Link to="/"> Home </Link>
-        <Link to="/projects"> Projects </Link>
-        <Link to="/experience"> Experience </Link>
+      <div
+        className={`nav-toggle ${isOpen && "open"}`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span className="bar"></span>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
