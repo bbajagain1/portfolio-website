@@ -5,7 +5,7 @@ import "../styles/education.css";
 const Education = () => {
   return (
     <section>
-      <h1 className="text-3xl">Educational Background</h1>
+      {/* <h1 className="text-3xl">Educational Background</h1>
       <table className="rounded-full">
         <tbody>
           {educationBackground.map((edu) => (
@@ -20,7 +20,7 @@ const Education = () => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </section>
   );
 };

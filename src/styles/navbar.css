@@ -8,9 +8,8 @@
 
 .Navbar > .nav-logo {
   font-weight: 700;
-  font-size: 21px;
+  height: 50px;
   margin: 15px;
-  color: #ffffff;
 }
 
 .Navbar > .nav-items > a {
@@ -51,12 +50,16 @@
     top: 60px;
     display: flex;
     flex-direction: column;
-    background: #3b4da7;
+    background: black;
     left: 0;
     width: 100%;
     height: 100%;
     transform: translateX(-100%);
     transition: all .45s;
+  }
+
+  .Navbar > .nav-items > a {
+    text-align: center;
   }
 
   .Navbar > .nav-items > a::before {

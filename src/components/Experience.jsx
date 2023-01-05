@@ -4,49 +4,58 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import WorkIcon from '@mui/icons-material/Work';
-import '../styles/experience.css';
-
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
+import "../styles/experience.css";
+import { workeducationBackground } from "../constants";
 
 function Experience() {
-    return (
-      <div>
-      <h1 className="heading">My Experiences</h1>
-        <VerticalTimeline lineColor="#3e497a">
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2018 - 2020"
-            iconStyle={{ background: "#e9d35b", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Back End Engineer - Apple
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Austin, Tx
-            </h4>
-            <p>Developed the backend infrastructure for internal tool.</p>
-          </VerticalTimelineElement>
-  
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2020 - present"
-            iconStyle={{ background: "#e9d35b", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Intern
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              San Francisco, CA
-            </h4>
-            <p>
-              Dream of doing intern in big company.
-            </p>
-          </VerticalTimelineElement>
-        </VerticalTimeline>
-      </div>
-    );
-  }
-  
-  export default Experience;
+  let workIconStyles = { background: "#06d6a0" };
+  let schoolIconStyles = { background: "#f9c74f" };
+
+  return (
+    <div className="Experience">
+      <h1 className="title">My Experiences</h1>
+      <VerticalTimeline lineColor="gray" layout= "1-column-right">
+        {workeducationBackground.map((element) => {
+          let isWorkIcon = element.icon === "work";
+          let showButton =
+            element.buttonText !== undefined &&
+            element.buttonText !== null &&
+            element.buttonText !== "";
+
+          return (
+            <VerticalTimelineElement
+              key={element.key}
+              date={element.date}
+              dateClassName="date"
+              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+              
+            >
+              <h3 className="vertical-timeline-element-title">
+                {element.title}
+              </h3>
+              <h5 className="vertical-timeline-element-subtitle">
+                {element.location}
+              </h5>
+              <p id="description">{element.description}</p>
+              {showButton && (
+                <a
+                  href="/"
+                  className={`button ${
+                    isWorkIcon ? "workButton" : "schoolButton"
+                  }`}
+                >
+                  {element.buttonText}
+                </a>
+              )}
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
+    </div>
+  );
+}
+
+export default Experience;

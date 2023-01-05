@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
   return (
     <section id="contact" class="full-height px-lg-5">
-    <div class="container">
+    {/* <div class="container">
 
         <div class="row justify-content-center text-center">
             <div class="col-lg-8 pb-4" data-aos="fade-up">
@@ -31,10 +31,10 @@ const Contact = () => {
                     </div>
                 </form>
             </div>
-        </div>
+        </div> */}
 
-
-    </div>
+{/* 
+    </div> */}
 </section>
   )
 }

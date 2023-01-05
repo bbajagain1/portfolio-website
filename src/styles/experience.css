@@ -1,9 +1,62 @@
-.heading{
-    font-size: 35px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: #3e497a ;
+.Experience {
+    background: rgb(55, 53, 53);
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: rgb(64,64,64);
 }
+
+.Experience > .title {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.Experience > .h3 {
+    padding-top: 0.25em;
+}
+
+.date {
+    color: white;
+ }
+
+ #description {
+    margin: 1.5em 0 2em 0;
+ }
+
+ .button {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: black;
+ }
+
+ .workButton {
+    background-color: rgb(224, 151, 62);
+ }
+
+ .workButton:hover {
+    background-color: rgb(178, 120, 50);
+ }
+
+ .schoolButton {
+    background-color: rgb(65, 233, 191);
+ }
+
+ .schoolButton:hover {
+    background-color: rgb(61, 182, 152);
+ }
+
+ @media only screen and (max-width: 1700px) {
+    .vertical-timeline-element-date{
+        display: block;
+        float: none;
+        color: rgb(95, 90, 90);
+        margin-top:1.5em ;
+    }
+}
+ 
+
+ 
+  
+
