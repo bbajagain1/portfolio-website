@@ -1,42 +1,83 @@
-import React from 'react'
+import React, { useState } from "react";
+import "../styles/contact.css";
+import { AiOutlineMail, AiFillPhone } from "react-icons/ai";
+import { IoLocationSharp } from "react-icons/io5";
+import { infosection } from "../constants";
 
 const Contact = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
-    <section id="contact" class="full-height px-lg-5">
-    {/* <div class="container">
+    <div className="Contact">
+      <h1>Contact me</h1>
+      <div className="contactsection-wrapper">
+        <div className="left-side">
+          <div className="infoblock">
+            <AiOutlineMail className="icon" />
+            <div className="infotext">{infosection.email}</div>
+          </div>
+          <div className="infoblock">
+            <AiFillPhone className="icon" />
+            <div className="infotext">{infosection.phonenumber}</div>
+          </div>
+          <div className="infoblock">
+            <IoLocationSharp className="icon" />
+            <div className="infotext">{infosection.address}</div>
+          </div>
+        </div>
+        <div className="right">
+          <div className="contactform">
+            <form className="formstyle">
+              <div className="form-group">
+                <label htmlFor="name" className="labelstyle">
+                  Your name
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={name}
+                    className="inputstyle"
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                </label>
+                <div className="form-group">
+                  <label htmlFor="email" className="labelstyle">
+                    Your email
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="inputstyle"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </label>
+                </div>
+                <div className="form-group">
+                  <label htmlFor="message" className="labelstyle">
+                    Your message
+                    <textarea
+                      type="message"
+                      id="message"
+                      className="textstyle"
+                      name="message"
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
+                  </label>
+                </div>
+              </div>
+              <button type="submit" className="buttonstyle">
+                Send
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8 pb-4" data-aos="fade-up">
-                <h6 class="text-brand">CONTACT</h6>
-                <h1>Interested in working together? Let's talk
-                </h1>
-            </div>
-
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="300">
-                <form action="#" class="row g-lg-3 gy-3">
-                    <div class="form-group col-md-6">
-                        <input type="text" class="form-control" placeholder="Enter your name" />
-                    </div>
-                    <div class="form-group col-md-6">
-                        <input type="email" class="form-control" placeholder="Enter your email" />
-                    </div>
-                    <div class="form-group col-12">
-                        <input type="text" class="form-control" placeholder="Enter subject" />
-                    </div>
-                    <div class="form-group col-12">
-                        <textarea name="" rows="4" class="form-control" placeholder="Enter your message"></textarea>
-                    </div>
-                    <div class="form-group col-12 d-grid">
-                        <button type="submit" class="btn btn-brand">Contact me</button>
-                    </div>
-                </form>
-            </div>
-        </div> */}
-
-{/* 
-    </div> */}
-</section>
-  )
-}
-
-export default Contact
+export default Contact;

@@ -16,7 +16,7 @@ function Experience() {
   return (
     <div className="Experience">
       <h1 className="title">My Experiences</h1>
-      <VerticalTimeline lineColor="gray" layout= "1-column-right">
+      <VerticalTimeline lineColor="gray">
         {workeducationBackground.map((element) => {
           let isWorkIcon = element.icon === "work";
           let showButton =

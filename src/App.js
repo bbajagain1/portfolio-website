@@ -22,7 +22,6 @@ function App() {
           rel="stylesheet"
         ></link>
         <Navbar />
-
         <Hero />
         <Routes>
           <Route exact path="/hero" component={Hero} />

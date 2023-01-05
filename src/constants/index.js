@@ -59,3 +59,9 @@ export const workeducationBackground = [
   }
 ];
 
+export const infosection = {
+  email : "bbajagain1@gmail.com",
+  phonenumber: "+979797979797",
+  address: "Austin, Tx"
+}
+  

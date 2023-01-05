@@ -1,0 +1,132 @@
+.Contact {
+  padding: 10rem 0;
+}
+
+.Contact > .contactsection-wrapper {
+  display: flex;
+  gap: 5rem;
+  margin-top: 2rem;
+  justify-content: space-between;
+  position: relative;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.Contact > .contactsection-wrapper::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 50%;
+  background-color: gray;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+}
+
+.Contact > .contactsection-wrapper > .left-side {
+  width: 100%;
+  max-width: 500px;
+}
+
+.Contact > .contactsection-wrapper > .right-side {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .Contact > .contactsection-wrapper {
+    flex-direction: column;
+  }
+
+  .Contact > .contactsection-wrapper::after {
+    display: none;
+  }
+
+  .Contact > .contactsection-wrapper > .left-side {
+    max-width: 100%;
+  }
+
+  .Contact > .contactsection-wrapper > .right-side {
+    max-width: 100%;
+    padding: 4rem 2rem 2rem 2rem;
+  }
+}
+
+.infoblock {
+  padding: 1.5rem;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  height: 2px;
+  margin-left: 3rem;
+}
+
+.infoblock > .icon {
+  color: white;
+  background-color: gray;
+  padding: 1.3rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon svg {
+  width: 3.5rem;
+}
+
+.infoblock > .infotext {
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1.3rem;
+  line-height: 1.3em;
+}
+
+.formstyle {
+  width: 100%;
+}
+
+.formstyle > .form-group {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.labelstyle {
+  font-size: 1.8rem;
+}
+
+.inputstyle,
+.textstyle {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1.2rem;
+  color: red;
+  background-color: blue;
+  outline: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.textstyle {
+  min-height: 250px;
+  resize: vertical;
+}
+
+.buttonstyle {
+  background-color: red;
+  color: black;
+  font-size: 2rem;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 1rem 4rem;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+  .infoblock > .infotext {
+    font-size: 1.4rem;
+  }
+}
