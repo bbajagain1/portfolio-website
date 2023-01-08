@@ -3,6 +3,7 @@ import "../styles/contact.css";
 import { AiOutlineMail, AiFillPhone } from "react-icons/ai";
 import { IoLocationSharp } from "react-icons/io5";
 import { infosection } from "../constants";
+import SectionTitle from "./SectionTitle";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -11,11 +12,11 @@ const Contact = () => {
 
   return (
     <div className="Contact">
-      <h1>Contact me</h1>
+      <SectionTitle heading="Contact me" />
       <div className="contactsection-wrapper">
         <div className="left-side">
           <div className="infoblock">
-            <AiOutlineMail className="icon" />
+            <AiFillPhone className="icon" />
             <div className="infotext">{infosection.email}</div>
           </div>
           <div className="infoblock">

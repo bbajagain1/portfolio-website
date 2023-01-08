@@ -1,0 +1,17 @@
+.section-title-style {
+    text-align: center;
+}
+
+.section-title-style > .heading {
+    font-size: 2rem;
+    color: white;
+    margin-top: 0.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+    
+
+    .section-title-style > .heading {
+      font-size: 1.6rem;
+    }
+  }

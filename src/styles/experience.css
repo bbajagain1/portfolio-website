@@ -1,16 +1,15 @@
 .Experience {
     background: rgb(55, 53, 53);
-    font-family: "Montserrat", sans-serif;
     font-size: 16px;
     color: rgb(64,64,64);
 }
 
-.Experience > .title {
+/* handled through section title */
+/* .Experience > .title {
     font-size: 2rem;
     color: white;
     text-align: center;
-    font-family: "Bebas Neue", sans-serif;
-}
+} */
 
 .Experience > .h3 {
     padding-top: 0.25em;

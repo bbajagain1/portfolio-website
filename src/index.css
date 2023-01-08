@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.App {
+  font-family: Poppins;
+  background: rgb(55, 53, 53);
+}
 
 :root {
   --black-gradient: linear-gradient(
