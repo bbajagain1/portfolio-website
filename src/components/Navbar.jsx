@@ -8,14 +8,10 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <img src={logo} alt="personal logo" className="nav-logo" />
+     
       <div className={`nav-items ${isOpen && "open"}`}>
-        {/* <a href="/home">Home</a>
-        <a href="/education">Education</a>
-        <a href="/experience">Experience</a>
-        <a href="/skills">Skills</a>
-        <a href="/contact">Contact</a> */}
         {navLinks.map((nav) => (
-          <a id={nav.id} href={nav.href}>
+          <a id={nav.id} href={nav.href} className="active">
             {nav.title}
           </a>
         ))}
@@ -25,8 +21,10 @@ const Navbar = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="bar"></span>
+     
       </div>
     </div>
+
   );
 };
 

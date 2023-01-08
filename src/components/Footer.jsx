@@ -1,18 +1,18 @@
 import React from "react";
 import "../styles/footer.css";
 
-import { SiFacebook, SiTwitter, SiGithub, SiLinkedin } from "react-icons/si";
-
 function Footer() {
     return (
-      <div className="footer">
-        {/* <div className="socialMedia">
-          <SiFacebook className="icon" />
-          <SiTwitter className="icon" />
-          <SiGithub className="icon"/>
-          <SiLinkedin className="icon"/>
-        </div>
-        <p> &copy; 2022 bibektech.com</p> */}
+      <div className="foo">
+      <footer>
+        <ul className="social-icon">
+          <li><a href="1"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="2"><ion-icon name="logo-github"></ion-icon></a></li>
+          <li><a href="3"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="4"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+        <p>© All rights reserved.</p>
+        </footer>
       </div>
     );
   }

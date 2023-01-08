@@ -1,5 +1,4 @@
 import "./index.css";
-import styles from "./styles";
 import {
   Navbar,
   Hero,
@@ -18,6 +17,15 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
+
+        {/* #make the navbar sticky */}
+        {/* <script type="text/javascript">
+          {window.addEventListener("scroll",function(){
+            var header = document.querySelector(Navbar);
+            header.classList.toggle("sticky", window.scrollY > 0)
+          })}
+        </script> */}
+
         <Hero />
         <Routes>
           <Route exact path="/hero" component={Hero} />

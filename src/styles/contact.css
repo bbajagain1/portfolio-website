@@ -74,13 +74,13 @@
 }
 
 .icon svg {
-  width: 3.5rem;
+  width: 1.2rem;
 }
 
 .infoblock > .infotext {
   max-width: 500px;
   margin: 0 auto;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.3em;
 }
 
@@ -94,7 +94,7 @@
 }
 
 .labelstyle {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
 }
 
 .inputstyle,
@@ -103,7 +103,7 @@
   font-size: 2rem;
   padding: 1.2rem;
   color: red;
-  background-color: blue;
+  background-color: transparent;
   outline: none;
   border-radius: 8px;
   margin-top: 1rem;
@@ -115,9 +115,9 @@
 }
 
 .buttonstyle {
-  background-color: red;
+  background-color: white;
   color: black;
-  font-size: 2rem;
+  font-size: 1.2rem;
   display: inline-block;
   outline: none;
   border: none;
