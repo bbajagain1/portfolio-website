@@ -11,7 +11,7 @@ const Navbar = () => {
      
       <div className={`nav-items ${isOpen && "open"}`}>
         {navLinks.map((nav) => (
-          <a id={nav.id} href={nav.href} className="active">
+          <a id={nav.id} href={nav.href}>
             {nav.title}
           </a>
         ))}

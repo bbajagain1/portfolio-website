@@ -1,38 +1,40 @@
 import React from "react";
-import { shield, star, google, apple } from "../assets";
 import "../styles/projects.css";
+import { motion } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
+import { projects } from "../assets";
+import SectionTitle from "./SectionTitle";
 
 const Projects = () => {
+
+  const [width, setWidth] = useState(0);
+  const carousel = useRef();
+
+  // to determin how much to scroll
+  useEffect(() => {
+      console.log(carousel.current.scrollWidth, carousel.current.offsetWidth);
+      setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
+  },[])
+
   return (
-    <>
-    {/* <heading>MY PROJECTS</heading>
-      <div id="carouselExampleIndicators" class="carousel slide bg-gray-400" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src={shield} alt="First slide" />
+    <div className="projects">
+    <SectionTitle heading="Projects"/>
+      <motion.div ref={carousel} className="carousel" whileTap={{cursor:"grabbing"}}>
+        <motion.div
+          drag="x"
+          dragConstraints={{ right: 0, left: -width }}
+          className="inner-carousel"
+        >
+          {projects.map((image) => {
+            return (
+              <motion.div className="item" key={image}>
+                <img src={image} alt="project"></img>
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </motion.div>
     </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src={shield} alt="Second slide" />
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src={shield} alt="Third slide" />
-    </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> */}
-    </>
   );
 };
 

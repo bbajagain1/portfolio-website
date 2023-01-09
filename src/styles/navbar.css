@@ -5,7 +5,7 @@
   align-items: center;
   background: black;
   position: sticky;
-  top: 00px;
+  top: 0;
 }
 
 .Navbar > .nav-logo {
@@ -16,7 +16,7 @@
 }
 
 .Navbar > .nav-items > a {
-  color: #ffffff;
+  color: white;
   font-size: 16px;
   text-decoration: none;
   margin: 15px;

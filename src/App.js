@@ -37,11 +37,11 @@ function App() {
         </Routes>
         <Hero />
 
-        <Skills />
+        <Skills /> 
 
         <Experience />
 
-        <Education />
+       <Education /> 
 
         <Projects />
 
